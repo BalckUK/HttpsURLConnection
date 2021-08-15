@@ -1,4 +1,4 @@
-package httpsurlconnection;
+package mail;
 
 import java.util.Properties;
 
@@ -13,22 +13,15 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 public class Send {
-	public static void main(String[] args)throws AddressException, MessagingException {
+	public static void main(String[] args) throws AddressException, MessagingException {
 		String host = "smtp.naver.com";
 		final String username = "haga5032"; // 네이버 아이디를 입력해주세요. @nave.com은 입력하지 마시구요.
-		final String password = "Umk85660@@"; // 네이버 이메일 비밀번호를 입력해주세요.
-		int port = 465; // 포트번호
+		final String password = "DBaudrms85660@@"; // 네이버 이메일 비밀번호를 입력해주세요.
+		String port = "465"; // 포트번호
 
 		// 메일 내용
-		// Scanner sc = new Scanner(System.in);
-		// System.out.print("받는사람 이메일 : ");
-		// String mail = sc.nextLine();
 		String recipient = "haga5032@naver.com"; // 받는 사람의 메일주소를 입력해주세요.
-		// System.out.print("제목 : ");
-		// String title = sc.nextLine();
 		String subject = "test"; // 메일 제목 입력해주세요.
-		// System.out.print("내용 : ");
-		// String code = sc.nextLine();
 		String body = "test"; // 메일 내용 입력해주세요.
 
 		Properties props = System.getProperties();
@@ -39,7 +32,7 @@ public class Send {
 		props.put("mail.smtp.port", port);
 		props.put("mail.smtp.auth", "true");
 		props.put("mail.smtp.ssl.enable", "true");
-		props.put("mail.smtp.ssl.trust", host);
+		//props.put("mail.smtp.ssl.trust", host);
 		// Session 생성
 		Session session = Session.getDefaultInstance(props, new Authenticator() {
 			String un = username;

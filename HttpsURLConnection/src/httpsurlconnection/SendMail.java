@@ -12,7 +12,7 @@ import javax.mail.internet.MimeMessage;
 
 public class SendMail {
 	public void NaverSendMail() throws Exception {
-		String host = "pop.naver.com";
+		String host = "smtp.naver.com";
 		final String username = "haga5032"; // 네이버 아이디를 입력해주세요. @nave.com은 입력하지 마시구요.
 		final String password = "Umk85660@@"; // 네이버 이메일 비밀번호를 입력해주세요.
 		int port = 465; // 포트번호

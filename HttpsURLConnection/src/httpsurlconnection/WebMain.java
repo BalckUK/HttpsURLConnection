@@ -22,6 +22,7 @@ public class WebMain {
 					String option = web.WebCrawling();
 					if(count == 0) {
 						option1 = option;
+						System.out.println(option);
 						++count;
 					}
 					if(!option.contentEquals(option1)) {
